@@ -2,26 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+.flex-center {
+  @apply flex justify-center items-center
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.nav-button {
+  @apply p-2 bg-gray-900 text-gray-100 px-4 rounded-md hover:bg-gray-800
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.navbar {
+  @apply flex justify-between p-6 px-8 border-gray-300 border-b-2 border-opacity-50 border-dashed
+}
+
+.contact-card {
+  @apply relative flex flex-col h-52 w-96 border-2 rounded-lg
+   border-gray-200 shadow-lg
+  text-gray-800 p-4
 }
